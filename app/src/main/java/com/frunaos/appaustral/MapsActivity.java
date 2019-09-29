@@ -6,6 +6,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -16,12 +17,14 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener{
 
     private GoogleMap mMap;
     private static final int LOCATION_REQUEST_CODE = 1;
+    private Marker marker_PM;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,21 +52,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
 
+        // Add a marker in Puerto montt and move the camera -41.4657400, -72.9428900
+        LatLng PM = new LatLng(-41.4657400, -72.9428900);
+        marker_PM = googleMap.addMarker(new MarkerOptions()
+                        .position(PM)
+                        .title("Puerto Montt"));
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(PM));
+
+        googleMap.setOnMarkerClickListener(this);
+
+        // Delimitar zoom
         googleMap.setMinZoomPreference(10);
-
-
-        // Add a marker in Sydney and move the camera -41.4657400, -72.9428900
-
-        LatLng sydney = new LatLng(-41.4657400, -72.9428900);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Puerto Montt"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
         CameraPosition cameraPosition = new CameraPosition.Builder()
-                .target(sydney)
+                .target(PM)
                 .zoom(10)
                 .bearing(360)
                 .tilt(90).build();
         googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
 
+
+        // gps y permisos
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
             mMap.setMyLocationEnabled(true);
@@ -82,9 +91,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap.getUiSettings().setZoomControlsEnabled(true);
 
-        // Marcadores
-        mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)));
     }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
@@ -100,5 +108,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         }
     }
+
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+        if (marker.equals(marker_PM)) {
+            Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
+
+            startActivity(intent);
+        }
+        return false;
+    }
+
+
 
 }
