@@ -63,7 +63,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         googleMap.setOnMarkerClickListener(this);
 
         // Delimitar zoom
-        googleMap.setMinZoomPreference(10);
+        googleMap.setMinZoomPreference(13);
         CameraPosition cameraPosition = new CameraPosition.Builder()
                 .target(PM)
                 .zoom(10)
