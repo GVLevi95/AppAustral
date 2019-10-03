@@ -62,7 +62,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng PM = new LatLng(-41.4657400, -72.9428900);
         marker_PM = googleMap.addMarker(new MarkerOptions()
                         .position(PM)
-                        .title("Puerto Montt"));
+                        .title("hola"));
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(PM));
 
