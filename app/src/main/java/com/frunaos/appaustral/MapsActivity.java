@@ -17,6 +17,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -25,6 +26,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private static final int LOCATION_REQUEST_CODE = 1;
     private Marker marker_PM;
+    private Marker markerOptionsPelluco;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +53,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        final LatLngBounds ADELAIDE = new LatLngBounds( new LatLng(-41.686771, -72.958514), new LatLng(-41.465522, -72.695522));
+        mMap.setLatLngBoundsForCameraTarget(ADELAIDE);
+
 
         // Add a marker in Puerto montt and move the camera -41.4657400, -72.9428900
         LatLng PM = new LatLng(-41.4657400, -72.9428900);
         marker_PM = googleMap.addMarker(new MarkerOptions()
                         .position(PM)
-                        .title("hola"));
+                        .title("Puerto Montt"));
 
         mMap.moveCamera(CameraUpdateFactory.newLatLng(PM));
 
@@ -92,13 +97,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setMapToolbarEnabled(false);
 
+
         LatLng pelluco = new LatLng(-41.489681, -72.893700);
-        MarkerOptions markerOptionsPelluco =
-                new MarkerOptions()
-                        .position(pelluco)
-                        .title("Pelluco")
-                        .snippet("Primera parada de la Carreta Austral");
-        Marker pelluco_marker = googleMap.addMarker(markerOptionsPelluco);
+        markerOptionsPelluco = googleMap.addMarker( new MarkerOptions()
+                .position(pelluco)
+                .title("Pelluco")
+                .snippet("Primera parada de la Carreta Austral"));
+
 
 
         LatLng pelluhuin = new LatLng(-41.489681, -72.893700);
@@ -215,6 +220,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             startActivity(intent);
         }
+        if (marker.equals(markerOptionsPelluco)) {
+            Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
+
+            startActivity(intent);
+        }
+
         return false;
     }
 
