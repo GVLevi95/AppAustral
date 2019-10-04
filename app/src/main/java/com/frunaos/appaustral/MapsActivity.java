@@ -19,6 +19,7 @@ import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
@@ -39,7 +40,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Marker chaicas_marker;
     private Marker cl_gutierrez_marker;
     private Marker cl_la_arena_marker;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,21 +68,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Puerto montt and move the camera -41.4657400, -72.9428900
-        LatLng PM = new LatLng(-41.4657400, -72.9428900);
-        MarkerOptions markerOptionsPM = new MarkerOptions()
-                        .position(PM)
-                        .title("Puerto Montt")
-                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
-
-                        mMap.moveCamera(CameraUpdateFactory.newLatLng(PM));
-
-                        googleMap.setOnMarkerClickListener(this);
-
-        marker_PM = googleMap.addMarker(markerOptionsPM);
 
 
+        final LatLngBounds ADELAIDE = new LatLngBounds( new LatLng(-41.686771, -72.958514), new LatLng(-41.465522, -72.695522));
+        mMap.setLatLngBoundsForCameraTarget(ADELAIDE);
 
+
+    
         // Delimitar zoom
         googleMap.setMinZoomPreference(10);
         CameraPosition cameraPosition = new CameraPosition.Builder()
@@ -112,15 +104,31 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setMapToolbarEnabled(false);
+       
+
 
         LatLng pelluco = new LatLng(-41.489681, -72.893700);
+
         MarkerOptions markerOptionsPelluco =
                 new MarkerOptions()
                         .position(pelluco)
                         .title("Pelluco")
+                        .snippet("Primera parada de la Carreta Austral"));
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
          pelluco_marker = googleMap.addMarker(markerOptionsPelluco);
-
+      
+  
+   // Add a marker in Puerto montt and move the camera -41.4657400, -72.9428900
+        LatLng PM = new LatLng(-41.4657400, -72.9428900);
+        MarkerOptions markerOptionsPM = 
+                new MarkerOptions()
+                        .position(PM)
+                        .title("Puerto Montt")
+                        .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
+        marker_PM = googleMap.addMarker(markerOptionsPM);
+      
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(PM));  
+      
 
         LatLng pelluhuin = new LatLng(-41.489681, -72.893700);
         MarkerOptions markerOptionsPelluhuin =
@@ -210,6 +218,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .title("Caleta la Arena")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
         cl_la_arena_marker = googleMap.addMarker(markerOptionsCL_Arena);
+      
+        googleMap.setOnMarkerClickListener(this);
 
     }
 
@@ -238,6 +248,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             startActivity(intent);
         }
+        if (marker.equals(markerOptionsPelluco)) {
+            Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
+
+            startActivity(intent);
+        }
+
         return false;
     }
 }
