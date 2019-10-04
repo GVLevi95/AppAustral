@@ -23,7 +23,7 @@ import com.google.android.gms.maps.model.LatLngBounds;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener{
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener{
 
     private GoogleMap mMap;
     private static final int LOCATION_REQUEST_CODE = 1;
@@ -70,11 +70,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
 
-        final LatLngBounds ADELAIDE = new LatLngBounds( new LatLng(-41.686771, -72.958514), new LatLng(-41.465522, -72.695522));
+        final LatLngBounds ADELAIDE = new LatLngBounds( new LatLng(-41.686771, -72.958514), new LatLng(-41.469326, -72.629929));
         mMap.setLatLngBoundsForCameraTarget(ADELAIDE);
 
 
-    
+        LatLng PM = new LatLng(-41.4657400, -72.9428900);
         // Delimitar zoom
         googleMap.setMinZoomPreference(10);
         CameraPosition cameraPosition = new CameraPosition.Builder()
@@ -107,34 +107,36 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
        
 
 
-        LatLng pelluco = new LatLng(-41.489681, -72.893700);
+        LatLng pelluco = new LatLng(-41.486585, -72.901386);
 
         MarkerOptions markerOptionsPelluco =
                 new MarkerOptions()
                         .position(pelluco)
                         .title("Pelluco")
-                        .snippet("Primera parada de la Carreta Austral"));
+                        .snippet("Balneario Pelluco")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
          pelluco_marker = googleMap.addMarker(markerOptionsPelluco);
       
   
    // Add a marker in Puerto montt and move the camera -41.4657400, -72.9428900
-        LatLng PM = new LatLng(-41.4657400, -72.9428900);
+
         MarkerOptions markerOptionsPM = 
                 new MarkerOptions()
                         .position(PM)
                         .title("Puerto Montt")
+                        .snippet("Capital de la provincia de Llanquihue y de la Región de Los Lagos.")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
         marker_PM = googleMap.addMarker(markerOptionsPM);
       
         mMap.moveCamera(CameraUpdateFactory.newLatLng(PM));  
       
 
-        LatLng pelluhuin = new LatLng(-41.489681, -72.893700);
+        LatLng pelluhuin = new LatLng(-41.493914, -72.896566);
         MarkerOptions markerOptionsPelluhuin =
                 new MarkerOptions()
                         .position(pelluhuin)
                         .title("Pelluhuin")
+                        .snippet("Balneario Pelluhuín.")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
         pelluhuin_marker = googleMap.addMarker(markerOptionsPelluhuin);
 
@@ -144,6 +146,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 new MarkerOptions()
                         .position(coihuin)
                         .title("Coihuin")
+                        .snippet("Bahia de Coihuin.")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
         coihuin_marker = googleMap.addMarker(markerOptionsCoihuin);
 
@@ -152,6 +155,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 new MarkerOptions()
                         .position(chamiza)
                         .title("Chamiza")
+                        .snippet("Localidad Rural")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
         chamiza_marker = googleMap.addMarker(markerOptionsChamiza);
 
@@ -160,14 +164,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 new MarkerOptions()
                         .position(blue_rock)
                         .title("Piedra Azul")
+                        .snippet("Localidad Rural")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
         br_marker = googleMap.addMarker(markerOptionsBR);
 
-        LatLng pichiquillaipe = new LatLng(-41.522128, -72.763744);
+        LatLng pichiquillaipe = new LatLng(-41.493926, -72.896552);
         MarkerOptions markerOptionsPichiquillaipe =
                 new MarkerOptions()
                         .position(pichiquillaipe)
-                        .title("")
+                        .title("pichiquillaipe")
+                        .snippet("Localidad Rural")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
         pichiquillaipe_marker = googleMap.addMarker(markerOptionsPichiquillaipe);
 
@@ -176,6 +182,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 new MarkerOptions()
                         .position(quillaipe)
                         .title("Quillaipe")
+                        .snippet("Localidad Rural")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
         q_marker = googleMap.addMarker(markerOptionsQuillaipe);
 
@@ -184,22 +191,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 new MarkerOptions()
                         .position(metri)
                         .title("Metri")
+                        .snippet("Localidad Rural")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
         metri_marker = googleMap.addMarker(markerOptionsMetri);
 
-        LatLng lenca = new LatLng(-41.606301, -72.683388);
+        LatLng lenca = new LatLng(-41.616711, -72.666701);
         MarkerOptions markerOptionsLenca =
                 new MarkerOptions()
                         .position(lenca)
                         .title("Lenca")
+                        .snippet("Localidad Rural")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
         lenca_marker = googleMap.addMarker(markerOptionsLenca);
 
-        LatLng chaicas = new LatLng(-41.615210, -72.658393);
+        LatLng chaicas = new LatLng(-41.606301, -72.683388);
         MarkerOptions markerOptionsChaicas =
                 new MarkerOptions()
                         .position(chaicas)
                         .title("Chaicas")
+                        .snippet("Localidad Rural")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
         chaicas_marker = googleMap.addMarker(markerOptionsChaicas);
 
@@ -208,6 +218,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 new MarkerOptions()
                         .position(cl_gutierrez)
                         .title("Caleta Gutierrez")
+                        .snippet("Localidad Rural")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
        cl_gutierrez_marker = googleMap.addMarker(markerOptionsCl_gutierrez);
 
@@ -216,10 +227,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 new MarkerOptions()
                         .position(cl_la_arena)
                         .title("Caleta la Arena")
+                        .snippet("Localidad Rural")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
         cl_la_arena_marker = googleMap.addMarker(markerOptionsCL_Arena);
-      
-        googleMap.setOnMarkerClickListener(this);
+
+        mMap.setOnInfoWindowClickListener(this);
 
     }
 
@@ -242,18 +254,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     @Override
-    public boolean onMarkerClick(Marker marker) {
+    public void onInfoWindowClick(Marker marker) {
         if (marker.equals(marker_PM)) {
             Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
 
             startActivity(intent);
         }
-        if (marker.equals(markerOptionsPelluco)) {
+        if (marker.equals(pelluco_marker)) {
             Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
 
             startActivity(intent);
         }
-
-        return false;
     }
 }
