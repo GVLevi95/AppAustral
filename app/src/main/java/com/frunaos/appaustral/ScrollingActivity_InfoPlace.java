@@ -2,6 +2,7 @@ package com.frunaos.appaustral;
 
 import android.os.Bundle;
 
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -27,5 +28,14 @@ public class ScrollingActivity_InfoPlace extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        Bundle bundle = getIntent().getExtras();
+        String dato=bundle.getString("ciudad");
+
+        CollapsingToolbarLayout toolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.toolbar_layout);
+
+        toolbarLayout.setTitle(dato);
+
+
     }
 }
