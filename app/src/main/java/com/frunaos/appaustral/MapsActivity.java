@@ -168,11 +168,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
         br_marker = googleMap.addMarker(markerOptionsBR);
 
-        LatLng pichiquillaipe = new LatLng(-41.493926, -72.896552);
+        LatLng pichiquillaipe = new LatLng(-41.522128, -72.763744);
         MarkerOptions markerOptionsPichiquillaipe =
                 new MarkerOptions()
                         .position(pichiquillaipe)
-                        .title("pichiquillaipe")
+                        .title("Pichiquillaipe")
                         .snippet("Localidad Rural")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
         pichiquillaipe_marker = googleMap.addMarker(markerOptionsPichiquillaipe);
