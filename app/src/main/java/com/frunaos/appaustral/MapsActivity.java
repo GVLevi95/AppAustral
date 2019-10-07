@@ -168,11 +168,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
         br_marker = googleMap.addMarker(markerOptionsBR);
 
-        LatLng pichiquillaipe = new LatLng(-41.493926, -72.896552);
+        LatLng pichiquillaipe = new LatLng(-41.522128, -72.763744);
         MarkerOptions markerOptionsPichiquillaipe =
                 new MarkerOptions()
                         .position(pichiquillaipe)
-                        .title("pichiquillaipe")
+                        .title("Pichiquillaipe")
                         .snippet("Localidad Rural")
                         .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
         pichiquillaipe_marker = googleMap.addMarker(markerOptionsPichiquillaipe);
@@ -257,13 +257,69 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onInfoWindowClick(Marker marker) {
         if (marker.equals(marker_PM)) {
             Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
-
+            intent.putExtra("ciudad","Puerto Montt");
             startActivity(intent);
         }
         if (marker.equals(pelluco_marker)) {
             Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
-
+            intent.putExtra("ciudad","Pelluco");
             startActivity(intent);
         }
+        if (marker.equals(pelluhuin_marker)) {
+            Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
+            intent.putExtra("ciudad","Pelluhuin");
+            startActivity(intent);
+        }
+        if (marker.equals(coihuin_marker)) {
+            Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
+            intent.putExtra("ciudad","Coihuin");
+            startActivity(intent);
+        }
+        if (marker.equals(chamiza_marker)) {
+            Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
+            intent.putExtra("ciudad","Chamiza");
+            startActivity(intent);
+        }
+        if (marker.equals(br_marker)) {
+            Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
+            intent.putExtra("ciudad","Piedra Azul");
+            startActivity(intent);
+        }
+        if (marker.equals(pichiquillaipe_marker)) {
+            Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
+            intent.putExtra("ciudad","PichiQuillaipe");
+            startActivity(intent);
+        }
+        if (marker.equals(q_marker)) {
+            Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
+            intent.putExtra("ciudad","Quillaipe");
+            startActivity(intent);
+        }
+        if (marker.equals(metri_marker)) {
+            Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
+            intent.putExtra("ciudad","Metri");
+            startActivity(intent);
+        }
+        if (marker.equals(lenca_marker)) {
+            Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
+            intent.putExtra("ciudad","Lenca");
+            startActivity(intent);
+        }
+        if (marker.equals(chaicas_marker)) {
+            Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
+            intent.putExtra("ciudad","Chaicas");
+            startActivity(intent);
+        }
+        if (marker.equals(cl_gutierrez_marker)) {
+            Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
+            intent.putExtra("ciudad","Caleta Gutierrez");
+            startActivity(intent);
+        }
+        if (marker.equals(cl_la_arena_marker)) {
+            Intent intent = new Intent(this, ScrollingActivity_InfoPlace.class);
+            intent.putExtra("ciudad","Caleta la Arena");
+            startActivity(intent);
+        }
+
     }
 }
