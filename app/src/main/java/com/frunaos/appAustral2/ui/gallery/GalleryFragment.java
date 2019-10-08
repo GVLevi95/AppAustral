@@ -13,6 +13,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.frunaos.appAustral2.R;
+import com.frunaos.appaustral.R;
 
 public class GalleryFragment extends Fragment {
 

@@ -2,6 +2,7 @@ package com.frunaos.appAustral2;
 
 import android.os.Bundle;
 
+import com.frunaos.appaustral.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
