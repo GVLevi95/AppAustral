@@ -1,4 +1,4 @@
-package com.frunaos.appAustral2.ui.home;
+package com.frunaos.AppAustral.ui.home;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.frunaos.appAustral2.R;
+import com.frunaos.AppAustral.R;
 
 public class HomeFragment extends Fragment {
 
