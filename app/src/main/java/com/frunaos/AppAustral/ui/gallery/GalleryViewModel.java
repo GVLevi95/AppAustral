@@ -1,4 +1,4 @@
-package com.frunaos.AppAustral.ui.gallery;
+package com.frunaos.appaustral.ui.gallery;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

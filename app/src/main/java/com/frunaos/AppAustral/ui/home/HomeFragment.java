@@ -1,4 +1,4 @@
-package com.frunaos.AppAustral.ui.home;
+package com.frunaos.appaustral.ui.home;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -8,11 +8,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 
-import com.frunaos.AppAustral.R;
+import com.frunaos.appaustral.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -49,15 +54,14 @@ public class HomeFragment extends Fragment {
                 mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
                 mMap.clear(); //clear old markers
-
                 final LatLngBounds ADELAIDE = new LatLngBounds( new LatLng(-41.686771, -72.958514), new LatLng(-41.469326, -72.629929));
                 mMap.setLatLngBoundsForCameraTarget(ADELAIDE);
 
                 CameraPosition googlePlex = CameraPosition.builder()
                         .target(new LatLng(-41.4657400, -72.9428900))
                         .zoom(10)
-                        .bearing(360)
-                        .tilt(90)
+                        .bearing(0)
+                        .tilt(45)
                         .build();
 
                 mMap.animateCamera(CameraUpdateFactory.newCameraPosition(googlePlex), 10000, null);
@@ -65,7 +69,6 @@ public class HomeFragment extends Fragment {
                 mMap.addMarker(new MarkerOptions()
                         .position(new LatLng(-41.4657400, -72.9428900))
                         .title("Puerto Montt"));
-
 
             }
         });

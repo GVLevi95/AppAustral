@@ -1,4 +1,4 @@
-package com.frunaos.AppAustral;
+package com.frunaos.appaustral;
 
 import android.os.Bundle;
 

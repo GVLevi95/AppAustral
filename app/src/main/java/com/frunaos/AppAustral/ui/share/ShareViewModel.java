@@ -1,4 +1,4 @@
-package com.frunaos.AppAustral.ui.share;
+package com.frunaos.appaustral.ui.share;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

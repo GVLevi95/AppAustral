@@ -1,4 +1,4 @@
-package com.frunaos.AppAustral.ui.send;
+package com.frunaos.appaustral.ui.send;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
