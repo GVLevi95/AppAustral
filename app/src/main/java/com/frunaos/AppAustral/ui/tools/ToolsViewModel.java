@@ -1,4 +1,4 @@
-package com.frunaos.AppAustral.ui.tools;
+package com.frunaos.appaustral.ui.tools;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

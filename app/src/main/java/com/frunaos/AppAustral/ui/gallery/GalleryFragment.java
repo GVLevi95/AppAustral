@@ -1,4 +1,4 @@
-package com.frunaos.AppAustral.ui.gallery;
+package com.frunaos.appaustral.ui.gallery;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.frunaos.AppAustral.R;
+import com.frunaos.appaustral.R;
 
 public class GalleryFragment extends Fragment {
 

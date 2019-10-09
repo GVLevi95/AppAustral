@@ -1,4 +1,4 @@
-package com.frunaos.appAustral2;
+package com.frunaos.appaustral;
 
 import org.junit.Test;
 
