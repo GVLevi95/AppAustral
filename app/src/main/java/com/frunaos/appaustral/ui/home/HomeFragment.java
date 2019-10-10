@@ -2,14 +2,21 @@ package com.frunaos.appaustral.ui.home;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
+import android.location.Location;
+import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
@@ -42,6 +49,7 @@ public class HomeFragment extends Fragment {
     private Marker cl_gutierrez_marker;
     private Marker cl_la_arena_marker;
 
+
     public HomeFragment() {
         // Required empty public constructor
 
@@ -50,7 +58,15 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
+            if (ContextCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
+                Log.i("Permisos", "Se tienen los permisos!");
+            } else {
+                ActivityCompat.requestPermissions(
+                        getActivity(), new String[] { android.Manifest.permission.ACCESS_COARSE_LOCATION, android.Manifest.permission.ACCESS_FINE_LOCATION }, 1222);
+            }
+        }
 
     }
 
@@ -81,6 +97,7 @@ public class HomeFragment extends Fragment {
 
                 mMap.animateCamera(CameraUpdateFactory.newCameraPosition(googlePlex), 3000, null);
 
+                mMap.setMyLocationEnabled(true);
 
                 // Add a marker in Puerto montt and move the camera -41.4657400, -72.9428900
                 LatLng PM = new LatLng(-41.4657400, -72.9428900);
