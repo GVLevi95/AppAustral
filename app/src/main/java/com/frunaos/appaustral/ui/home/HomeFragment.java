@@ -68,7 +68,7 @@ public class HomeFragment extends Fragment {
                 mMap = googleMap;
                 mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
-
+                mMap.setMinZoomPreference(10);
                 final LatLngBounds ADELAIDE = new LatLngBounds(new LatLng(-41.686771, -72.958514), new LatLng(-41.469326, -72.629929));
                 mMap.setLatLngBoundsForCameraTarget(ADELAIDE);
 
