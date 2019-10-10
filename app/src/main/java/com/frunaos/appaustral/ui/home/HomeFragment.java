@@ -1,6 +1,7 @@
 package com.frunaos.appaustral.ui.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
@@ -26,6 +27,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class HomeFragment extends Fragment {
+    GoogleMap mMap;
     private Marker marker_PM;
     private Marker pelluco_marker;
     private Marker pelluhuin_marker;
@@ -60,12 +62,14 @@ public class HomeFragment extends Fragment {
 
         SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.frg);  //use SuppoprtMapFragment for using in fragment instead of activity  MapFragment = activity   SupportMapFragment = fragment
         mapFragment.getMapAsync(new OnMapReadyCallback() {
+
             @Override
-            public void onMapReady(GoogleMap mMap) {
+            public void onMapReady(GoogleMap googleMap) {
+                mMap = googleMap;
                 mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 
-                mMap.clear(); //clear old markers
-                final LatLngBounds ADELAIDE = new LatLngBounds( new LatLng(-41.686771, -72.958514), new LatLng(-41.469326, -72.629929));
+
+                final LatLngBounds ADELAIDE = new LatLngBounds(new LatLng(-41.686771, -72.958514), new LatLng(-41.469326, -72.629929));
                 mMap.setLatLngBoundsForCameraTarget(ADELAIDE);
 
                 CameraPosition googlePlex = CameraPosition.builder()
@@ -75,7 +79,7 @@ public class HomeFragment extends Fragment {
                         .tilt(45)
                         .build();
 
-                mMap.animateCamera(CameraUpdateFactory.newCameraPosition(googlePlex), 10000, null);
+                mMap.animateCamera(CameraUpdateFactory.newCameraPosition(googlePlex), 3000, null);
 
 
                 // Add a marker in Puerto montt and move the camera -41.4657400, -72.9428900
@@ -87,8 +91,6 @@ public class HomeFragment extends Fragment {
                                 .snippet("Capital de la provincia de Llanquihue y de la Región de Los Lagos.")
                                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
                 marker_PM = mMap.addMarker(markerOptionsPM);
-
-                mMap.moveCamera(CameraUpdateFactory.newLatLng(PM));
 
 
                 LatLng pelluco = new LatLng(-41.486585, -72.901386);
@@ -201,12 +203,89 @@ public class HomeFragment extends Fragment {
                                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
                 cl_la_arena_marker = mMap.addMarker(markerOptionsCL_Arena);
 
+
+                mMap.getUiSettings().setZoomControlsEnabled(true);
+                mMap.getUiSettings().setMapToolbarEnabled(false);
+
+                mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
+                    @Override
+                    public void onInfoWindowClick(Marker marker) {
+                        if (marker.equals(marker_PM)) {
+                            Intent intent = new Intent(HomeFragment.this.getActivity(), ScrollingActivity_InfoPlace.class);
+                            intent.putExtra("ciudad","Puerto Montt");
+                            startActivity(intent);
+                        }
+                        if (marker.equals(pelluco_marker)) {
+                            Intent intent = new Intent(HomeFragment.this.getActivity(), ScrollingActivity_InfoPlace.class);
+                            intent.putExtra("ciudad","Pelluco");
+                            startActivity(intent);
+                        }
+                        if (marker.equals(pelluhuin_marker)) {
+                            Intent intent = new Intent(HomeFragment.this.getActivity(), ScrollingActivity_InfoPlace.class);
+                            intent.putExtra("ciudad","Pelluhuin");
+                            startActivity(intent);
+                        }
+                        if (marker.equals(coihuin_marker)) {
+                            Intent intent = new Intent(HomeFragment.this.getActivity(), ScrollingActivity_InfoPlace.class);
+                            intent.putExtra("ciudad","Coihuin");
+                            startActivity(intent);
+                        }
+                        if (marker.equals(chamiza_marker)) {
+                            Intent intent = new Intent(HomeFragment.this.getActivity(), ScrollingActivity_InfoPlace.class);
+                            intent.putExtra("ciudad","Chamiza");
+                            startActivity(intent);
+                        }
+                        if (marker.equals(br_marker)) {
+                            Intent intent = new Intent(HomeFragment.this.getActivity(), ScrollingActivity_InfoPlace.class);
+                            intent.putExtra("ciudad","Piedra Azul");
+                            startActivity(intent);
+                        }
+                        if (marker.equals(pichiquillaipe_marker)) {
+                            Intent intent = new Intent(HomeFragment.this.getActivity(), ScrollingActivity_InfoPlace.class);
+                            intent.putExtra("ciudad","PichiQuillaipe");
+                            startActivity(intent);
+                        }
+                        if (marker.equals(q_marker)) {
+                            Intent intent = new Intent(HomeFragment.this.getActivity(), ScrollingActivity_InfoPlace.class);
+                            intent.putExtra("ciudad","Quillaipe");
+                            startActivity(intent);
+                        }
+                        if (marker.equals(metri_marker)) {
+                            Intent intent = new Intent(HomeFragment.this.getActivity(), ScrollingActivity_InfoPlace.class);
+                            intent.putExtra("ciudad","Metri");
+                            startActivity(intent);
+                        }
+                        if (marker.equals(lenca_marker)) {
+                            Intent intent = new Intent(HomeFragment.this.getActivity(), ScrollingActivity_InfoPlace.class);
+                            intent.putExtra("ciudad","Lenca");
+                            startActivity(intent);
+                        }
+                        if (marker.equals(chaicas_marker)) {
+                            Intent intent = new Intent(HomeFragment.this.getActivity(), ScrollingActivity_InfoPlace.class);
+                            intent.putExtra("ciudad","Chaicas");
+                            startActivity(intent);
+                        }
+                        if (marker.equals(cl_gutierrez_marker)) {
+                            Intent intent = new Intent(HomeFragment.this.getActivity(), ScrollingActivity_InfoPlace.class);
+                            intent.putExtra("ciudad","Caleta Gutierrez");
+                            startActivity(intent);
+                        }
+                        if (marker.equals(cl_la_arena_marker)) {
+                            Intent intent = new Intent(HomeFragment.this.getActivity(), ScrollingActivity_InfoPlace.class);
+                            intent.putExtra("ciudad","Caleta la Arena");
+                            startActivity(intent);
+                        }
+                    }
+                });
+
             }
+
 
         });
 
 
         return rootView;
+
     }
 
     private BitmapDescriptor bitmapDescriptorFromVector(Context context, int vectorResId) {
@@ -217,5 +296,7 @@ public class HomeFragment extends Fragment {
         vectorDrawable.draw(canvas);
         return BitmapDescriptorFactory.fromBitmap(bitmap);
     }
+
+
 
 }
