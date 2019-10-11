@@ -14,78 +14,78 @@
     <fragment
         android:id="@+id/nav_Pelluco"
         android:name="com.frunaos.appaustral.ui.Localidades.PellucoFragment"
-        android:label="@string/menu_send"
+        android:label="Pelluco"
         tools:layout="@layout/pelluco_fragment" />
 
     <fragment
         android:id="@+id/nav_Coihuin"
         android:name="com.frunaos.appaustral.ui.Localidades.CoihuinFragment"
-        android:label="@string/menu_send"
+        android:label="Coihuin"
         tools:layout="@layout/coihuin_fragment" />
 
     <fragment
         android:id="@+id/nav_Chamiza"
         android:name="com.frunaos.appaustral.ui.Localidades.ChamizaFragment"
-        android:label="@string/menu_send"
+        android:label="Chamiza"
         tools:layout="@layout/chamiza_fragment" />
 
     <fragment
         android:id="@+id/nav_Pichiquillaipe"
         android:name="com.frunaos.appaustral.ui.Localidades.PichiquillaipeFragment"
-        android:label="@string/menu_send"
+        android:label="Pichiquillaipe"
         tools:layout="@layout/pichiquillaipe_fragment" />
 
     <fragment
         android:id="@+id/nav_Quillaipe"
         android:name="com.frunaos.appaustral.ui.Localidades.QuillaipeFragment"
-        android:label="@string/menu_send"
+        android:label="Quillaipe"
         tools:layout="@layout/quillaipe_fragment" />
 
     <fragment
         android:id="@+id/nav_Metri"
         android:name="com.frunaos.appaustral.ui.Localidades.MetriFragment"
-        android:label="@string/menu_send"
+        android:label="Metri"
         tools:layout="@layout/metri_fragment" />
 
     <fragment
         android:id="@+id/nav_Lenca"
         android:name="com.frunaos.appaustral.ui.Localidades.LencaFragment"
-        android:label="@string/menu_send"
+        android:label="Lenca"
         tools:layout="@layout/lenca_fragment" />
 
     <fragment
         android:id="@+id/nav_chaicas"
         android:name="com.frunaos.appaustral.ui.Localidades.ChaicasFragment"
-        android:label="@string/menu_send"
+        android:label="Chaicas"
         tools:layout="@layout/chaicas_fragment" />
 
     <fragment
         android:id="@+id/nav_caleta_gutierrez"
         android:name="com.frunaos.appaustral.ui.Localidades.CGutierrezFragment"
-        android:label="@string/menu_send"
+        android:label="Caleta Gutierrez"
         tools:layout="@layout/cgutierrez_fragment" />
 
     <fragment
         android:id="@+id/nav_caleta_arena"
         android:name="com.frunaos.appaustral.ui.Localidades.CArenaFragment"
-        android:label="@string/menu_send"
+        android:label="Caleta La Arena"
         tools:layout="@layout/carena_fragment" />
 
     <fragment
         android:id="@+id/nav_Piedra_Azul"
         android:name="com.frunaos.appaustral.ui.Localidades.PiedraAzulFragment"
-        android:label="@string/menu_send"
+        android:label="Piedra Azul"
         tools:layout="@layout/piedra_azul_fragment" />
 
 
     <fragment
         android:id="@+id/nav_municipal"
         android:name="com.frunaos.appaustral.ui.Municipal.MunicipalFragment"
-        android:label="@string/menu_send"
+        android:label="Municipalidad"
         tools:layout="@layout/municipal_fragment" />
     <fragment
         android:id="@+id/nav_acerca"
         android:name="com.frunaos.appaustral.ui.AcercaD.AcercaFragment"
-        android:label="@string/menu_send"
+        android:label="Acerca de"
         tools:layout="@layout/acerca_fragment" />
 </navigation>
