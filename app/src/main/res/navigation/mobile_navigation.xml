@@ -11,11 +11,17 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
-    <fragment
+    <fragments
         android:id="@+id/nav_Pelluco"
         android:name="com.frunaos.appaustral.ui.Localidades.PellucoFragment"
         android:label="Pelluco"
         tools:layout="@layout/pelluco_fragment" />
+
+    <fragment
+        android:id="@+id/nav_Pelluhuin"
+        android:name="com.frunaos.appaustral.ui.Localidades.PelluhuinFragment"
+        android:label="Pelluhuin"
+        tools:layout="@layout/pelluhuin_fragment" />
 
     <fragment
         android:id="@+id/nav_Coihuin"
