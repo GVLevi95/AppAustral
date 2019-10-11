@@ -21,18 +21,10 @@ public class MunicipalFragment extends Fragment {
     private MunicipalViewModel mViewModel;
 
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        mViewModel =
-                ViewModelProviders.of(this).get(MunicipalViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.municipal_fragment, container, false);
-        final TextView textView = root.findViewById(R.id.text_send);
-        mViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
         return root;
     }
 
