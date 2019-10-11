@@ -36,8 +36,8 @@
         tools:layout="@layout/fragment_share" />
 
     <fragment
-        android:id="@+id/nav_send"
-        android:name="com.frunaos.appaustral.ui.send.SendFragment"
+        android:id="@+id/nav_municipal"
+        android:name="com.frunaos.AppAustral.ui.Municipal.MunicipalFragment"
         android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
+        tools:layout="@layout/municipal_fragment" />
 </navigation>
