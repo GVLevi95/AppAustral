@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.nav_home, R.id.nav_Pelluco, R.id.nav_Pelluhuin,
                 R.id.nav_Pichiquillaipe, R.id.nav_Coihuin, R.id.nav_Chamiza,
                 R.id.nav_Piedra_Azul, R.id.nav_Quillaipe, R.id.nav_Lenca,
-                R.id.nav_caleta_arena, R.id.nav_municipalidad,
+                R.id.nav_caleta_arena, R.id.nav_municipal,
                 R.id.nav_caleta_gutierrez, R.id.nav_chaicas, R.id.nav_Metri)
                 .setDrawerLayout(drawer)
                 .build();
