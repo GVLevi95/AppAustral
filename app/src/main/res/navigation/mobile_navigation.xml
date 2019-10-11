@@ -6,12 +6,6 @@
     app:startDestination="@+id/nav_home">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.frunaos.appaustral.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-
-    <fragment
         android:id="@+id/nav_Pelluco"
         android:name="com.frunaos.appaustral.ui.Localidades.PellucoFragment"
         android:label="@string/menu_send"
@@ -81,7 +75,7 @@
     <fragment
         android:id="@+id/nav_municipal"
         android:name="com.frunaos.appaustral.ui.Municipal.MunicipalFragment"
-        android:label="@string/menu_send"
+        android:label="Municipalidad"
         tools:layout="@layout/municipal_fragment" />
     <fragment
         android:id="@+id/nav_acerca"
