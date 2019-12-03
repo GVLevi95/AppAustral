@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "603415003923",
+    "firebase_url": "https://fir-austral2.firebaseio.com",
+    "project_id": "fir-austral2",
+    "storage_bucket": "fir-austral2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603415003923:android:6f76b78199075cbc51d0e6",
+        "android_client_info": {
+          "package_name": "com.frunaos.appaustral"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603415003923-33bpcod5c4fkah2ksu1u43h20uatp2de.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.frunaos.appaustral",
+            "certificate_hash": "229e30774e19d1fb181fd1be4a9e63efde66be1c"
+          }
+        },
+        {
+          "client_id": "603415003923-j63b949td8j9at4stikcr1srp083neue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCargjT87z2jGAmwP7xedQSbZ9GAavkXZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603415003923-j63b949td8j9at4stikcr1srp083neue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
