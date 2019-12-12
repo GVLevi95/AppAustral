@@ -5,9 +5,20 @@
     android:layout_height="match_parent"
     tools:context=".ui.Localidades.CGutierrezFragment">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="408dp"
+        android:layout_height="267dp"
+        android:layout_marginLeft="-80dp"
+        android:layout_marginEnd="400dp"
+        android:layout_marginRight="-80dp"
+        android:src="@drawable/caletagutierrez" />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Caleta Gutierrez"/>
+        android:layout_height="314dp"
+        android:layout_marginTop="300dp"
+        android:text="En el kilometro 42 de la ruta 7 esta caleta Gutierrez, nombre que recibio debido a las primeras familias fundadoras que llevaron el apellido Gutiérrez.
+Aunque en un principio Caleta Gutierrez ni siqueira aparecia en el mapa, las familias que aquí llegaron para instalarse, le cambiaron la economia al lugar.
+Se eestima que el poblamiento de este sector se produjo a finales delsiglo XIX con el propósito de explotar los arboles nativos de la cordillera." />
 
 </FrameLayout>

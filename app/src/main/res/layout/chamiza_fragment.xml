@@ -5,9 +5,20 @@
     android:layout_height="match_parent"
     tools:context=".ui.Localidades.ChamizaFragment">
 
+    <androidx.appcompat.widget.AppCompatImageView
+    android:layout_width="408dp"
+    android:layout_height="267dp"
+    android:layout_marginLeft="-80dp"
+    android:layout_marginEnd="400dp"
+    android:layout_marginRight="-80dp"
+    android:src="@drawable/chamiza" />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Chamiza"/>
+        android:layout_height="314dp"
+        android:layout_marginTop="300dp"
+        android:text="Chamiza corresponde a una localidades rural de la comuna de Puerto Montt, Provincia de Llanquihue, Región de Los Lagos - Chile. Se encuentra ubicada a pocos km al este de la ciudad de Puerto Montt, en la ribera del río Chamiza.
+
+La localidad fue afectada por la erupción del volcán Calbuco de 2015." />
 
 </FrameLayout>

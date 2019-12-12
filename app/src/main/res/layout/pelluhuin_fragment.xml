@@ -5,9 +5,23 @@
     android:layout_height="match_parent"
     tools:context=".ui.Localidades.PelluhuinFragment">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="408dp"
+        android:layout_height="267dp"
+        android:layout_marginLeft="-80dp"
+        android:layout_marginEnd="400dp"
+        android:layout_marginRight="-80dp"
+        android:src="@drawable/pelluhuin" />
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Pelluhuin"/>
+        android:layout_height="314dp"
+        android:layout_marginTop="300dp"
+        android:text="Pelluhuin es un sector a 5 kms. de la ciudad de Puerto Montt, con una playa de arena gris y fina.
+  Se dice que su nombre se debe a la fusión de ambos sectores que estan mas cerca con esta playa y esos son 'Pelluco'  y 'Cohuin'. Ahí el nombre de 'PELLU HUIN'
+Antiguamente este lugar era conocido por los lugareños como 'Piedra Lobo' puesto que en uno de los lugares
+cada día llegaba un lobo marino( Otaria Flavescens) y se posaba por largas horas, esto ocurrió durante varios años, lo curioso es que siempre fué el mismo lobo marino el que subía a la piedra y descansaba mirando el mar.
+El gobierno de ese entonces ( ) nombró el sector como Punta Pelluco, debido a que , se consideraba el término de la playa Pelluco.
+     Pelluhuin se encuentra en al lado de la carretera Austral, que en el año 1975 por el C.M.T (comando militar del trabajo) durante el gobierno del ex presidente   Augusto Pinochet, dió lugar a la carretera Austral, que llevaría por poco tiempo su nombre, el que fué cambiado a Carretera Austral, durante el gobierno de el Señor Ricardo Lagos Escobar, dando lugar a un terreno que por ley, en ese tiempo, fué declarado fiscal, el que fué utilizado por mucho tiempo como un vertedero informal.
+   Durante la época de los '80 en el 'boom del pelillo'(Glacilaria chilensis) este terreno fué utilizado por la población flotante, como asentamiento dando  lugar a las llamadas 'ranchas de nylon' las que se construían con este material, de precarias estructuras, las que improvisaban casas o carpas, que servían para cubrirse de los embates de la naturaleza y que también proporcionaban espacio para poder secar el pelillo que recolectaban estas familias de escasos recursos de la costa de este sector." />
 
 </FrameLayout>

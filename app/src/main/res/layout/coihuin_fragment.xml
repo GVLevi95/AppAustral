@@ -5,9 +5,17 @@
     android:layout_height="match_parent"
     tools:context=".ui.Localidades.CoihuinFragment">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="427dp"
+        android:layout_height="267dp"
+        android:layout_marginEnd="400dp"
+        android:src="@drawable/coihuin" />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Coihuin"/>
+        android:layout_height="314dp"
+        android:layout_marginTop="300dp"
+        android:text="LLa Bahia de Coihuin se ubica unos 4 kms al sur de Puerto Montt, su mayor atractivo son estos bancos de arena que quedan al descubierto durante las horas de marea baja. En esta zona el fenomeno adquiere mayor espectacularidad pues la mar llega a retirarse hasta 3 kms dejando al descubierto el fondo marino, develando un paraiso para mariscadores y observadores de aves.
+Para otros es el lugar ideal para la contemplacion de puestas de sol especialmente despues de un dia de lluvia. La multiples lagunas que se forman y el contraste con el cielo atiborrado de nubes que parecen las pinceladas de Dios convierte a Cohuin, ademas en un paraiso fotografico." />
 
 </FrameLayout>

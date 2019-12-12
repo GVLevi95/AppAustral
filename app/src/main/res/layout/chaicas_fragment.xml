@@ -5,10 +5,24 @@
     android:layout_height="match_parent"
     tools:context=".ui.Localidades.ChaicasFragment">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="408dp"
+        android:layout_height="267dp"
+        android:layout_marginLeft="-80dp"
+        android:layout_marginEnd="400dp"
+        android:layout_marginRight="-80dp"
+        android:src="@drawable/chaicas" />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Chaicas"
-        />
+        android:layout_height="314dp"
+        android:layout_marginTop="300dp"
+        android:text="Chaicas se encuentra a 40 Kilometros de Puerto Montt y es mayormente reconocida
+por su caleta de pescadores y la presencia de tejedoras e hilanderas. Los habitantes
+de Chaicas han sabido trabajar todos los recursos de la localidad, mezclando una intensa
+vida de camp con la vida maritima. Sus tradiciones locales van de la mano con la agricultura,
+siembra de papa y el madereo, actividades que se realizan desde hace varias decadas.
+Aqui tambien se encuentran las piscinas de Salmones Chaicas,dedicadas principalmente al cultivo de salmones,siendo bastante importante para la localidad" />
+
 
 </FrameLayout>

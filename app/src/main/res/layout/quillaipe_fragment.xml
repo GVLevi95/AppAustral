@@ -4,10 +4,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.Localidades.QuillaipeFragment">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="408dp"
+        android:layout_height="267dp"
+        android:layout_marginLeft="-80dp"
+        android:layout_marginEnd="400dp"
+        android:layout_marginRight="-80dp"
+        android:src="@drawable/quillaipe" />
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Quillaipe"/>
+        android:layout_height="314dp"
+        android:layout_marginTop="300dp"
+        android:text="Ubicada a poco mas de 20 kilometros del centro de Puerto Montt
+y rodeada de montañas, bosque nativo y una hermosa ensenada
+la cual es el habitat natural de cisnes de cuello negro,
+entre otras especies la localidad de Quillaipe trata de conservar
+sus tradiciones y cultura campesina gracias al cultivo de la tierra, la cria
+de animales y la actividades relacionadas al mar" />
 
 </FrameLayout>

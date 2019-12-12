@@ -5,9 +5,21 @@
     android:layout_height="match_parent"
     tools:context=".ui.Localidades.LencaFragment">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="408dp"
+        android:layout_height="267dp"
+        android:layout_marginLeft="-80dp"
+        android:layout_marginEnd="400dp"
+        android:layout_marginRight="-80dp"
+        android:src="@drawable/lenca" />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Lenca"/>
+        android:layout_height="314dp"
+        android:layout_marginTop="300dp"
+        android:text="Antiaguamente la Carretera Austral recibia el nombre de Lenca, pero hoy esta pequeña
+localidad es reconocida por ser la entrada principal del Parque Nacional Alerce Andino.
+Lenca es un antiguo villorrio maderero cuyo icono mas destacado es su pintoresca iglesia,
+icono mas destacado es su pintoresca iglesia, que data desde 1829. la iglesia es uno de los principales atractivos turisticos del lugar y se caracteriza por la tradicional arquitectura de la zona" />
 
 </FrameLayout>

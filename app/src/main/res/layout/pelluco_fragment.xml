@@ -5,9 +5,28 @@
     android:layout_height="match_parent"
     tools:context=".ui.Localidades.PellucoFragment">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="427dp"
+        android:layout_height="267dp"
+        android:layout_marginEnd="400dp"
+        android:src="@drawable/pelluco" />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Pelluco"/>
+        android:layout_height="314dp"
+        android:layout_marginTop="300dp"
+        android:text="Antiguo balneario fundado por familias de la alta sociedad,3 el sector está dominado por grandes casas, departamentos y condominios de la clase media y alta puertomontina, con variada gastronomía y clubes nocturnos; en él se encuentra la Sede Puerto Montt de la Universidad Austral de Chile.4
+
+Como Puerto Montt no tiene grandes playas, la de Pelluco 'es la mejor alternativa para bañarse durante el verano y para que los turistas disfruten de una oferta de cabañas y restaurantes frente al mar''.2 Cuando baja la marea, la playa crece mucho debido al poco desnivel que presenta el litoral; el lugar, abrigado, determina su poco oleaje y sus aguas calmas.
+Puerto Montt desde Pelluco - Chile
+
+A principios de 2016 comenzaron los trabajos para construir una doble vía de Puerto Montt a Pelluco;5 a finales de año las obras había avanzado en cerca del 25%.6
+Pelluco desde Mirador barco, Febrero 2019
+
+La iglesia de la Santa Cruz3 es el templo de la parroquia san Peregrino Laziosi de Pelluco.78
+
+Luis Corvalán, senador (1981-1973) y secretario general del Partido Comunista de Chile entre 1958 y 1990, nació en Pelluco.
+" />
+
 
 </FrameLayout>

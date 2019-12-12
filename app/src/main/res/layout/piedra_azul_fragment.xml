@@ -5,9 +5,24 @@
     android:layout_height="match_parent"
     tools:context=".ui.Localidades.PiedraAzulFragment">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="408dp"
+        android:layout_height="267dp"
+        android:layout_marginLeft="-80dp"
+        android:layout_marginEnd="400dp"
+        android:layout_marginRight="-80dp"
+        android:src="@drawable/piedraazul" />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Piedra Azul"/>
+        android:layout_height="314dp"
+        android:layout_marginTop="300dp"
+        android:text="La carretera austral penetra en Piedra azul Zigzagueando entre el cerro
+y el mar. Lo primero que llama la atencion es la presencia de numerosas
+casas tipicas de pescadores pegadas al angosto camino y con la playa como patio
+trasero. Su forma denota no solo de una comunidad de hombres y mujeres
+vinculados al mar y a la tierra, sino el espiritu de superacion
+
+que se reflejan en sus construcciones." />
 
 </FrameLayout>

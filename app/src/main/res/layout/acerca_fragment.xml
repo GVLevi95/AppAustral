@@ -14,7 +14,7 @@
         android:id="@+id/txt_acerca"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Acerca de "
-        app:textAllCaps="false" />
+        android:text="Esta aplicacion esta enfocada para dar a concer lugares hermoso  de la carretera austral siendo asi como una guia para el primer tramo de la carretera austral.  "
+         />
 
 </FrameLayout>

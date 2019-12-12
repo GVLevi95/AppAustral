@@ -5,9 +5,21 @@
     android:layout_height="match_parent"
     tools:context=".ui.Localidades.CArenaFragment">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="408dp"
+        android:layout_height="267dp"
+        android:layout_marginLeft="-80dp"
+        android:layout_marginEnd="400dp"
+        android:layout_marginRight="-80dp"
+        android:src="@drawable/caletalaarena" />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Caleta la Arena"/>
+        android:layout_height="314dp"
+        android:layout_marginTop="300dp"
+        android:text="La ultima localidad del primer tramo de la Carretera Austral es Caleta La Arena,
+ubicada a 45 Kilometros de Puerto Montt. En este lugar se encuentra el principal punto de recalada para los transbordadores que, durante un viaje de 30 minutos, trasladan vehiculos
+de todo tipo hacia Hornopiren, provincia de Palena, para continuar con el segundo tramo de la
+Carretera Austral. El poblado se encuentra bajo un robusto cordon cordillerano cuyos origenes datan desde que llegaron las primeras familias colonizadoras" />
 
 </FrameLayout>

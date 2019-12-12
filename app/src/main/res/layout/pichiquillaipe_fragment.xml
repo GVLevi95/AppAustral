@@ -5,9 +5,23 @@
     android:layout_height="match_parent"
     tools:context=".ui.Localidades.PichiquillaipeFragment">
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="408dp"
+        android:layout_height="267dp"
+        android:layout_marginLeft="-80dp"
+        android:layout_marginEnd="400dp"
+        android:layout_marginRight="-80dp"
+        android:src="@drawable/pichiquillaipe" />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Pichiquillaipe"/>
+        android:layout_height="314dp"
+        android:layout_marginTop="300dp"
+        android:text="Hacia el kilometro 19 de la carretera austral, desviandose hacia el sur
+por un empinado camino vecinal sin pavimentar, se encuentra Pichiquillaipe
+o Pichi Quillaipeuna imponente zona flanqueada por la intocada Cordillera
+de Quillaipe y la peninsula homonima que se proyecta en forma de triangulo
+invertido hacia las tranquilas aguas del Seno de Reloncavi'
+Quillaipe" />
 
 </FrameLayout>
